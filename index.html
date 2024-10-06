@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReciPro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="w-full flex items-center justify-between px-16 h-[80px] border-b-2 navbar">
+        <div class="text-4xl stroke-text">
+            ReciPro
+        </div>
+        <div>
+            <ul class="flex items-center gap-8 ml-12">
+                <li class="underline-hover text-lg font-semibold">Home</li>
+                <li class="underline-hover text-lg font-semibold">Recipes</li>
+                <li class="underline-hover text-lg font-semibold">About</li>
+                <li class="underline-hover text-lg font-semibold">Make✨</li>
+            </ul>
+        </div>
+        <div class="flex items-center justify-center gap-4">
+            <button id="signup" class="lightBtn">Sign Up</button>
+            <button id="login" class="darkBtn">Login</button>
+        </div>
+    </div>
+    <!-- Navbar -->
+
+    <!-- Login -->
+    <div id="loginwindowbg" class="hidden fixed inset-0 flex items-center bg-black/50 justify-center z-50 fade-in">
+        <div id="loginwindow" class=" backdrop-blur-md bg-white/30 p-8 rounded-lg shadow-lg max-w-sm w-full fade-in">
+            <h2 class="text-2xl mb-4 text-center font-semibold">Login</h2>
+            <form class="flex flex-col items-center justify-center">
+                <!-- Username/Email Input -->
+                <div class="mb-4">
+                    <label class="block text-gray-700">Username:</label>
+                    <input type="email" placeholder="Enter User Name"
+                        class="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:border-blue-500"
+                        required>
+                </div>
+
+                <!-- Password Input -->
+                <div class="mb-4">
+                    <label class="block text-gray-700">Password:</label>
+                    <input type="password" placeholder="Enter Password"
+                        class="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:border-blue-500"
+                        required>
+                </div>
+
+                <!-- Login Button -->
+                <button type="submit" class="bg-blue-500 text-white  mx-auto hover:bg-blue-400  p-2 rounded-lg">
+                    Login
+                </button>
+
+                <p class="flex flex-row gap-1">Don't have an account
+                <p id="signup1" class="text-red-700"> Sign Up! </p>
+                </p>
+            </form>
+        </div>
+    </div>
+    <!-- Login -->
+
+    <!-- Sign Up -->
+    <div id="signupwindowbg" class=" hidden fixed inset-0  flex items-center bg-black/50 justify-center z-50 fade-in ">
+        <div id="signupwindow"
+            class=" rounded-xl backdrop-blur-md shadow-lg bg-slate-200 bg-opacity-30 flex flex-col justify-center items-center ">
+            <div class="p-12 flex flex-col justify-center items-center">
+                <span class="text-4xl font-semibold font-serif my-2">Register</span>
+                <span class="text-l text-slate-500 mb-8 font-md font-sans">Enter your information to register
+                </span>
+                <div class="flex flex-row gap-28 w-full">
+                    <div class="flex flex-col gap-1">
+                        <label class="text-sm  font-semibold text-slate-700" for="name">First Name</label>
+                        <input placeholder="Enter your name" class="rounded shadow p-1" type="text" />
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <label class="text-sm font-semibold text-slate-700" for="name">Last Name</label>
+                        <input placeholder="Enter your last name" class="rounded shadow p-1" type="text" />
+                    </div>
+                </div>
+    
+                <div class="flex w-full flex-col mt-8">
+    
+                    <label class="text-sm font-semibold text-slate-700" for="name">Email</label>
+                    <input placeholder="Enter your email" class="rounded shadow p-1 w-full" type="text" />
+    
+    
+                </div>
+                <div class="flex  w-full flex-col mt-8">
+    
+                    <label class="text-sm font-semibold text-slate-700" for="name">Password</label>
+                    <input placeholder="Enter your Password" class="rounded shadow p-1 w-full " type="pass" />
+    
+                </div>
+    
+                <button class="rounded bg-blue-500 mt-12 p-2 text-white font-semibold hover:bg-blue-400">
+                    Register</button>
+            </div>
+        </div>
+    </div>
+    <!-- Sign Up -->
+
+    <!-- Home -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <div class="word-slider">
+                <span id="word">Discover</span>
+            </div>
+            <p class=" text-3xl mt-8">Cooking Made Easy: Explore, <span class="text-[orange]">Create</span>, Enjoy!</p>
+        </div>
+    </section>
+    <!-- Home -->
+    <script src="script.js"></script>
+</body>
+</html>
